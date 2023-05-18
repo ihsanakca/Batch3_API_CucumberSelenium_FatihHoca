@@ -16,13 +16,13 @@ public class SignUpStepDefs {
         ExlabRequest.response.prettyPrint();
     }
 
-    @Then("The user verifys that the status code is {int}")
-    public void the_user_verifys_that_the_status_code_is(int expectedStatusCode) {
+    @Then("The user verifies that the status code is {int}")
+    public void the_user_verifies_that_the_status_code_is(int expectedStatusCode) {
         assertEquals(expectedStatusCode, ExlabRequest.response.getStatusCode());
     }
 
-    @Then("The user verfiys that body contains {string}")
-    public void the_user_verfiys_that_body_contains(String token) {
+    @Then("The user verifies that body contains {string}")
+    public void the_user_verifies_that_body_contains(String token) {
         assertTrue(ExlabRequest.response.body().asString().contains(token));
     }
 
